@@ -88,12 +88,24 @@ private void PrintBody (PrintWriter out)
     out.println("  </style>");
     out.println("</head>");
     out.println("");
-    out.println("<script src=\"https://unpkg.com/react@16/umd/react.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/react-dom@16/umd/react-dom.production.min.js\"></script>");
+
+    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
+    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
     out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
+    
+    out.println("<script type=\"text/babel\">");
+    out.println("const Hello = () => {");
+    out.println("return (");
+    out.println("<h1>GMU Bathroom Reviewer</h1>");
+    out.println(");");
+    out.println("}");
+    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
+    out.println("</script>");
 
     out.println("<body>");
     out.println("");
+    out.println("<div id=\"hello\"></div>");
+    out.println("<script src=\"App.js\"></script>");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax.</p>");
     out.println("<h3>Please select a building.</h3>");
