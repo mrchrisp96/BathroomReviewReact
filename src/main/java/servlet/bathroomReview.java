@@ -95,7 +95,7 @@ private void PrintBody (PrintWriter out)
     out.println("<script type=\"text/babel\">");
     out.println("const Hello = () => {");
     out.println("return (");
-    out.println("<h1>GMU Bathroom Revieweee</h1>");
+    out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println(");");
     out.println("}");
     out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
