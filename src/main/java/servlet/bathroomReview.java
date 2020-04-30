@@ -104,7 +104,7 @@ private void PrintBody (PrintWriter out)
 
     out.println("<body>");
     out.println("");
-    out.println("<div id=\"hello\"></div>");
+    out.println("<div id=\"root\"></div>");
     out.println("<script src=\"App.js\"></script>");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax.</p>");
