@@ -63,7 +63,6 @@ private void PrintBody (PrintWriter out)
     out.println("<html>");
     out.println("<head>");
     out.println("  <title>");
-    out.println("    GMU Bathroom Reviewer");
     out.println("  </title>");
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
