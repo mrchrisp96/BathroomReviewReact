@@ -85,6 +85,9 @@ private void PrintBody (PrintWriter out)
     out.println("    text-align: center;");
     out.println("  }");
     out.println("  </style>");
+    out.println("<script src=\"js/react.development.min.js\"></script>");
+    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
+    out.println("<script src=\"js/browser.min.js\"></script>");
     out.println("</head>");
     out.println("");
 
@@ -92,9 +95,6 @@ private void PrintBody (PrintWriter out)
     out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
     out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
     
-    out.println("<script src=\"js/react.development.min.js\"></script>");
-    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
-    out.println("<script src=\"js/browser.min.js\"></script>");
 
     out.println("<script type=\"text/babel\">");
     out.println("const Hello = () => {");
