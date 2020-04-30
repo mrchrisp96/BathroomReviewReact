@@ -92,11 +92,14 @@ private void PrintBody (PrintWriter out)
     out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
     out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
     
+    out.println("<script src=\"js/react.development.min.js\"></script>");
+    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
+    out.println("<script src=\"js/browser.min.js\"></script>");
+
     out.println("<script type=\"text/babel\">");
     out.println("const Hello = () => {");
     out.println("return (");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
-    out.println("<h2>This web app allows you to review the bathrooms of a building at GMU in Fairfax.</h2>");
     out.println(");");
     out.println("}");
     out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
@@ -106,6 +109,7 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("<div id=\"root\"></div>");
     out.println("<script src=\"App.js\"></script>");
+    out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax.</p>");
     out.println("<h3>Please select a building.</h3>");
     out.println("<!-- https://cs.gmu.edu:8443/offutt/servlet/formHandler -->");
     out.println("<form method=\"post\" action=\"https://cs.gmu.edu:8443/offutt/servlet/formHandler\" id=\"myForm\">");
