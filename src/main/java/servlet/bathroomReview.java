@@ -96,6 +96,7 @@ private void PrintBody (PrintWriter out)
     out.println("const Hello = () => {");
     out.println("return (");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
+    out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax.</p>");
     out.println(");");
     out.println("}");
     out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
