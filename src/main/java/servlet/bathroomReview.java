@@ -114,7 +114,8 @@ private void PrintBody (PrintWriter out)
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
     out.println("<!-- https://cs.gmu.edu:8443/offutt/servlet/formHandler -->");
-    out.println("<form method=\"post\" action=\"https://cs.gmu.edu:8443/offutt/servlet/formHandler\" id=\"myForm\">");
+//    https://cs.gmu.edu:8443/offutt/servlet/formHandler
+    out.println("<form method=\"post\" action=\"https://www.google.com\" id=\"myForm\">");
     out.println("<select name=\"building\">");
     out.println("    <option value=\"Volgenau\" selected=\"selected\">Volgenau School of Engineering</option>");
     out.println("    <option value=\"Music\">Music Theater Building</option>");
