@@ -71,6 +71,9 @@ private void PrintBody (PrintWriter out)
     out.println("<script src=\"js/react.development.min.js\"></script>");
     out.println("<script src=\"js/react-dom.development.min.js\"></script>");
     out.println("<script src=\"js/browser.min.js\"></script>");
+    
+    out.println("<script src=\"App.js\"></script>");
+
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
     out.println("    text-align: center;");
@@ -108,7 +111,6 @@ private void PrintBody (PrintWriter out)
     out.println("<body>");
     out.println("");
     out.println("<div id=\"root\"></div>");
-    out.println("<script src=\"App.js\"></script>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
     out.println("<!-- https://cs.gmu.edu:8443/offutt/servlet/formHandler -->");
@@ -182,9 +184,6 @@ private void PrintBody (PrintWriter out)
     out.println("</form>");
     out.println("");
     out.println("<script>");
-    out.println("function doGet() {");
-    out.println("    ");
-    out.println("}");
     out.println("function getScore(){");
     out.println("   var i = 0;");
     out.println("   var odor = -1;");
@@ -201,13 +200,16 @@ private void PrintBody (PrintWriter out)
     out.println("     }");
     out.println("     i = i + 1;");
     out.println("   }");
-    out.println("   if (document.getElementById(\"yes\").checked){");
+    out.println("   if (document.getElementById(\"yes\").checked) {");
     out.println("     would = 1;");
     out.println("   }");
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
-    out.println("");
-    out.println("   window.alert(\"Restroom review score: \" + score + \" out of 100\");");
+    out.println("   if(document.getElementById(\"userComments\").value) {");
+    out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
+    out.println("   } else {");
+    out.println("       window.alert(\"Please input a comment!\");");
+    out.println("   }");
     out.println("}");
     out.println("</script>");
     out.println("");
