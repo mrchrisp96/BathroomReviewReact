@@ -11,14 +11,13 @@ import javax.servlet.http.*;
 
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet( name = "Assignment7", urlPatterns = {"/assignment7"} )
-public class bathroomReview extends HttpServlet {
+@WebServlet( name = "results", urlPatterns = {"/results"} )
+public class bathroomReviewResults extends HttpServlet {
 
 // Location of servlet.
 static String Domain  = "bathroomreview.herokuapp.com";
 
 // Other strings.
-static String formHandler = "https://cs.gmu.edu:8443/offutt/servlet/formHandler";
 
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
@@ -102,7 +101,7 @@ private void PrintBody (PrintWriter out)
     out.println("<script type=\"text/babel\">");
     out.println("const Hello = () => {");
     out.println("return (");
-    out.println("<h1>GMU Bathroom Reviewer</h1>");
+    out.println("<h1>GMU Bathroom Review Results</h1>");
     out.println(");");
     out.println("}");
     out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
@@ -111,69 +110,25 @@ private void PrintBody (PrintWriter out)
     out.println("<body>");
     out.println("");
     out.println("<div id=\"root\"></div>");
-    out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
+    out.println("<p>Here's your results!</p>");
     out.println("<h3>Please select a building</h3>");
-    out.println("<!-- https://cs.gmu.edu:8443/offutt/servlet/formHandler -->");
-//    https://cs.gmu.edu:8443/offutt/servlet/formHandler
-    out.println("<form method=\"post\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
-    out.println("<select name=\"building\">");
-    out.println("    <option value=\"Volgenau\" selected=\"selected\">Volgenau School of Engineering</option>");
-    out.println("    <option value=\"Music\">Music Theater Building</option>");
-    out.println("    <option value=\"SUB1\">Sub1</option>");
-    out.println("    <option value=\"HUB\">The Hub</option>");
-    out.println("    <option value=\"deLaski\">deLaski Performing Arts Building</option>");
-    out.println("    <option value=\"Planetary\">Planetary Hall</option>");
-    out.println("    <option value=\"Innovation\">Innovation Hall</option>");
-    out.println("");
-    out.println("</select>");
+    out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
     out.println("");
     out.println("    <h3>");
     out.println("        Cleanliness");
     out.println("    </h3>");
-    out.println("    <p style=“text-align:justify”>");
-    out.println("    <input type=\"radio\" name=\"clean\" id=\"veryDirty\" value=\"veryDirty\" checked/>");
-    out.println("    <label for=\"veryDirty\">Very Dirty</label>");
-    out.println("            <input type=\"radio\" name=\"clean\" id=\"dirty\" value=\"dirty\" />");
-    out.println("    <label for=\"dirty\">Dirty</label>");
-    out.println("            <input type=\"radio\" name=\"clean\" id=\"slightlyMessy\" value=\"slightlyMessy\" />");
-    out.println("    <label for=\"slightlyMessy\">Slightly Messy</label>");
-    out.println("            <input type=\"radio\" name=\"clean\" id=\"mostlyClean\" value=\"mostlyClean\" />");
-    out.println("    <label for=\"mostlyClean\">Mostly Clean</label>");
-    out.println("            <input type=\"radio\" name=\"clean\" id=\"completelyClean\" value=\"completelyClean\" />");
-    out.println("    <label for=\"completelyClean\">Completely Clean</label>");
-    out.println("    </p>");
-    out.println("");
     out.println("");
     out.println("    <h3>");
     out.println("        Odor");
     out.println("    </h3>");
-    out.println("    <p style=“text-align:justify”>");
-    out.println("    <input type=\"radio\" name=\"odor\" id=\"unbearable\" value=\"unbearable\" checked/>");
-    out.println("        <label for=\"unbearable\">Unbearable</label>");
-    out.println("    <input type=\"radio\" name=\"odor\" id=\"unpleasant\" value=\"unpleasant\" />");
-    out.println("        <label for=\"unpleasant\">Unpleasant</label>");
-    out.println("    <input type=\"radio\" name=\"odor\" id=\"moderate\" value=\"moderate\" />");
-    out.println("        <label for=\"moderate\">Moderate</label>");
-    out.println("    <input type=\"radio\" name=\"odor\" id=\"unnoticeable\" value=\"unnoticeable\" />");
-    out.println("        <label for=\"unnoticeable\">Unnoticeable</label>");
-    out.println("    <input type=\"radio\" name=\"odor\" id=\"fresh\" value=\"fresh\" />");
-    out.println("        <label for=\"fresh\">Fresh</label><br/>");
-    out.println("    </p>");
     out.println("");
     out.println("    <h3>");
     out.println("    Would you use this restroom again?<br/>");
     out.println("  </h3>");
-    out.println("  <input type=\"radio\" name=\"wouldUseAgain\" id=\"yes\" value=\"yes\" />");
-    out.println("      <label for=\"yes\">Yes</label><br/>");
-    out.println("  <input type=\"radio\" name=\"wouldUseAgain\" id=\"no\" value=\"no\" checked/>");
-    out.println("      <label for=\"no\">No</label><br/>");
     out.println("");
     out.println("<h3>");
-    out.println("    Any additional comments");
+    out.println("    Additional comments");
     out.println("</h3>");
-    out.println("");
-    out.println("");
-    out.println("<textarea id=\"userComments\" name=\"userComments\" form=\"myForm\" style=\"width:700px; height:150px;\" rows=\"50\" cols=\"300\" placeholder=\"Enter your message...\"></textarea>");
     out.println("");
     out.println("  <br/><br/>");
     out.println("");
@@ -183,36 +138,6 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
     out.println("</form>");
-    out.println("");
-    out.println("<script>");
-    out.println("function getScore(){");
-    out.println("   var i = 0;");
-    out.println("   var odor = -1;");
-    out.println("   var clean = -1;");
-    out.println("   var would = 0;");
-    out.println("   let cIDs = [\"veryDirty\",\"dirty\",\"slightlyMessy\",\"mostlyClean\",\"completelyClean\"];");
-    out.println("   let oIDs = [\"unbearable\",\"unpleasant\",\"moderate\",\"unnoticeable\",\"fresh\"];");
-    out.println("   while (i<5){");
-    out.println("     if (document.getElementById(cIDs[i]).checked){");
-    out.println("       clean = i;");
-    out.println("     }");
-    out.println("     if (document.getElementById(oIDs[i]).checked){");
-    out.println("       odor = i;");
-    out.println("     }");
-    out.println("     i = i + 1;");
-    out.println("   }");
-    out.println("   if (document.getElementById(\"yes\").checked) {");
-    out.println("     would = 1;");
-    out.println("   }");
-    out.println("");
-    out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
-    out.println("   if(document.getElementById(\"userComments\").value) {");
-    out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
-    out.println("   } else {");
-    out.println("       window.alert(\"Please input a comment!\");");
-    out.println("   }");
-    out.println("}");
-    out.println("</script>");
     out.println("");
     out.println("</body>");
     out.println("</html>");
