@@ -190,7 +190,7 @@ private void PrintBody (PrintWriter out)
     out.println("   var odor = -1;");
     out.println("   var clean = -1;");
     out.println("   var would = 0;");
-    out.println("   var textarea = document.getElementById(\"userComments\");");
+    out.println("   var textarea = document.getElementById(\"userComments\").value.toLowerCase();");
     out.println("   let cIDs = [\"veryDirty\",\"dirty\",\"slightlyMessy\",\"mostlyClean\",\"completelyClean\"];");
     out.println("   let oIDs = [\"unbearable\",\"unpleasant\",\"moderate\",\"unnoticeable\",\"fresh\"];");
     out.println("   while (i<5){");
@@ -207,10 +207,14 @@ private void PrintBody (PrintWriter out)
     out.println("   }");
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
-    out.println("   if(textarea.value) {");
+    out.println("   if(textarea) {");
     out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("   } else {");
-    out.println("       window.alert(\"Please input a comment!\");");
+    out.println("       if(textarea.includes(\"fuck\")) {");
+    out.println("           window.alert(\"Please ommit innapropriate words!\");");
+    out.println("       } else {");
+    out.println("           window.alert(\"Please input a comment!\");");
+    out.println("       }");
     out.println("       event.preventDefault();");
     out.println("   }");
     out.println("}");
