@@ -98,14 +98,14 @@ private void PrintBody (PrintWriter out)
     out.println("");
 //
 //
-//    out.println("<script type=\"text/babel\">");
-//    out.println("const Hello = () => {");
-//    out.println("return (");
-//    out.println("<h1>GMU Bathroom Review Results</h1>");
-//    out.println(");");
-//    out.println("}");
-//    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
-//    out.println("</script>");
+    out.println("<script type=\"text/babel\">");
+    out.println("const Hello = () => {");
+    out.println("return (");
+    out.println("<h1>GMU Bathroom Review Results</h1>");
+    out.println(");");
+    out.println("}");
+    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
+    out.println("</script>");
 //
 //    out.println("<body>");
 //    out.println("");
