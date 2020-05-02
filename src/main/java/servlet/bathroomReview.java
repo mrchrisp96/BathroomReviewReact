@@ -190,7 +190,7 @@ private void PrintBody (PrintWriter out)
     out.println("   var odor = -1;");
     out.println("   var clean = -1;");
     out.println("   var would = 0;");
-    out.println("   var textarea = document.getElementById(\"userComments\");");
+    out.println("   var textarea = document.getElementById(\"userComments\").toLowerCase();");
     out.println("   let cIDs = [\"veryDirty\",\"dirty\",\"slightlyMessy\",\"mostlyClean\",\"completelyClean\"];");
     out.println("   let oIDs = [\"unbearable\",\"unpleasant\",\"moderate\",\"unnoticeable\",\"fresh\"];");
     out.println("   while (i<5){");
