@@ -59,88 +59,88 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
 private void PrintBody (PrintWriter out)
 {
     
-    out.println("<html>");
-    out.println("<head>");
-    out.println("  <title>");
-    out.println("  </title>");
-    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
-    
-    out.println("<script src=\"js/react.development.min.js\"></script>");
-    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
-    out.println("<script src=\"js/browser.min.js\"></script>");
-    
-    out.println("<script src=\"App.js\"></script>");
-
-    out.println("  <style type=\"text/css\">");
-    out.println("  h1{");
-    out.println("    text-align: center;");
-    out.println("    font-size:3em;");
-    out.println("  }");
-    out.println("  h3{");
-    out.println("  text-align: center;");
-    out.println("    font-size:1.25em;");
-    out.println("  }");
-    out.println("  p{");
-    out.println("    text-align: center;");
-    out.println("  }");
-    out.println("  body{");
-    out.println("      background-color: lightyellow;");
-    out.println("    padding-left: 10em;");
-    out.println("    padding-right: 10em;");
-    out.println("  }");
-    out.println("  form{");
-    out.println("    text-align: center;");
-    out.println("  }");
-    out.println("  </style>");
-    out.println("</head>");
-    out.println("");
-    
-
-    out.println("<script type=\"text/babel\">");
-    out.println("const Hello = () => {");
-    out.println("return (");
-    out.println("<h1>GMU Bathroom Review Results</h1>");
-    out.println(");");
-    out.println("}");
-    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
-    out.println("</script>");
-
-    out.println("<body>");
-    out.println("");
-    out.println("<div id=\"root\"></div>");
-    out.println("<p>Here's your results!</p>");
-    out.println("<h3>Please select a building</h3>");
-    out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
-    out.println("");
-    out.println("    <h3>");
-    out.println("        Cleanliness");
-    out.println("    </h3>");
-    out.println("");
-    out.println("    <h3>");
-    out.println("        Odor");
-    out.println("    </h3>");
-    out.println("");
-    out.println("    <h3>");
-    out.println("    Would you use this restroom again?<br/>");
-    out.println("  </h3>");
-    out.println("");
-    out.println("<h3>");
-    out.println("    Additional comments");
-    out.println("</h3>");
-    out.println("");
-    out.println("  <br/><br/>");
-    out.println("");
-    out.println("");
-    out.println("    <button onclick=\"getScore()\">Submit</button>");
-    // out.println("    <p><a href=\"https://bathroomreview.herokuapp.com/assignment6\">SWE432 Assignment 6</a></p>");
-    out.println("");
-    out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
-    out.println("</form>");
-    out.println("");
-    out.println("</body>");
-    out.println("</html>");
+//    out.println("<html>");
+//    out.println("<head>");
+//    out.println("  <title>");
+//    out.println("  </title>");
+//    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
+//    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
+//    out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
+//    
+//    out.println("<script src=\"js/react.development.min.js\"></script>");
+//    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
+//    out.println("<script src=\"js/browser.min.js\"></script>");
+//    
+//    out.println("<script src=\"App.js\"></script>");
+//
+//    out.println("  <style type=\"text/css\">");
+//    out.println("  h1{");
+//    out.println("    text-align: center;");
+//    out.println("    font-size:3em;");
+//    out.println("  }");
+//    out.println("  h3{");
+//    out.println("  text-align: center;");
+//    out.println("    font-size:1.25em;");
+//    out.println("  }");
+//    out.println("  p{");
+//    out.println("    text-align: center;");
+//    out.println("  }");
+//    out.println("  body{");
+//    out.println("      background-color: lightyellow;");
+//    out.println("    padding-left: 10em;");
+//    out.println("    padding-right: 10em;");
+//    out.println("  }");
+//    out.println("  form{");
+//    out.println("    text-align: center;");
+//    out.println("  }");
+//    out.println("  </style>");
+//    out.println("</head>");
+//    out.println("");
+//    
+//
+//    out.println("<script type=\"text/babel\">");
+//    out.println("const Hello = () => {");
+//    out.println("return (");
+//    out.println("<h1>GMU Bathroom Review Results</h1>");
+//    out.println(");");
+//    out.println("}");
+//    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
+//    out.println("</script>");
+//
+//    out.println("<body>");
+//    out.println("");
+//    out.println("<div id=\"root\"></div>");
+//    out.println("<p>Here's your results!</p>");
+//    out.println("<h3>Please select a building</h3>");
+//    out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
+//    out.println("");
+//    out.println("    <h3>");
+//    out.println("        Cleanliness");
+//    out.println("    </h3>");
+//    out.println("");
+//    out.println("    <h3>");
+//    out.println("        Odor");
+//    out.println("    </h3>");
+//    out.println("");
+//    out.println("    <h3>");
+//    out.println("    Would you use this restroom again?<br/>");
+//    out.println("  </h3>");
+//    out.println("");
+//    out.println("<h3>");
+//    out.println("    Additional comments");
+//    out.println("</h3>");
+//    out.println("");
+//    out.println("  <br/><br/>");
+//    out.println("");
+//    out.println("");
+//    out.println("    <button onclick=\"getScore()\">Submit</button>");
+//    // out.println("    <p><a href=\"https://bathroomreview.herokuapp.com/assignment6\">SWE432 Assignment 6</a></p>");
+//    out.println("");
+//    out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
+//    out.println("</form>");
+//    out.println("");
+//    out.println("</body>");
+//    out.println("</html>");
 
     
 } // End PrintBody
