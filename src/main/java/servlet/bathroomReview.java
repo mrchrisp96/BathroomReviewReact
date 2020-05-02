@@ -185,15 +185,15 @@ private void PrintBody (PrintWriter out)
     out.println("</form>");
     out.println("");
     out.println("<script>");
-    out.println("function getScore(event) {");
+    out.println("function getScore(event){");
     out.println("   var i = 0;");
     out.println("   var odor = -1;");
     out.println("   var clean = -1;");
     out.println("   var would = 0;");
-    out.println("   var textarea = document.getElementById(\"userComments\").toLowerCase();");
+    out.println("   var textarea = document.getElementById(\"userComments\");");
     out.println("   let cIDs = [\"veryDirty\",\"dirty\",\"slightlyMessy\",\"mostlyClean\",\"completelyClean\"];");
     out.println("   let oIDs = [\"unbearable\",\"unpleasant\",\"moderate\",\"unnoticeable\",\"fresh\"];");
-    out.println("   while (i<5) {");
+    out.println("   while (i<5){");
     out.println("     if (document.getElementById(cIDs[i]).checked){");
     out.println("       clean = i;");
     out.println("     }");
@@ -210,8 +210,7 @@ private void PrintBody (PrintWriter out)
     out.println("   if(textarea.value) {");
     out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("   } else {");
-    out.println("       event.preventDefault();");
-    out.println("       if(textarea.includes('fuck') || textarea.includes('gay') || textarea.includes('shit') || textarea.includes('piss')) {");
+    out.println("       if(textarea.toLowerCase().includes('fuck') || textarea.toLowerCase().includes('gay') || textarea.toLowerCase().includes('shit') || textarea.toLowerCase().includes('piss')) {");
     out.println("           window.alert(\"Please don't use innapropriate words!\");");
     out.println("       } else {");
     out.println("           window.alert(\"Please input a comment!\");");
