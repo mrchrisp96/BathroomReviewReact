@@ -208,7 +208,7 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
     out.println("   if(textarea) {");
-    out.println("       if(textarea.indexOf(\"fuck\") != -1) {");
+    out.println("       if((textarea.indexOf(\"fuck\") || textarea.indexOf(\"shit\") || textarea.indexOf(\"piss\") || textarea.indexOf(\"gay\")) != -1) {");
     out.println("           window.alert(\"Please omit innapropriate words!\");");
     out.println("           event.preventDefault();");
     out.println("       } else {");
