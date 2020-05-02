@@ -210,7 +210,7 @@ private void PrintBody (PrintWriter out)
     out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("   } else {");
     out.println("       window.alert(\"Please input a comment!\");");
-    out.println("       e.preventDefault();");
+    out.println("       event.preventDefault();");
     out.println("   }");
     out.println("}");
     out.println("</script>");
