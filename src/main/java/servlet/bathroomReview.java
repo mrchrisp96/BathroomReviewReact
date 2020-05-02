@@ -208,13 +208,13 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
     out.println("   if(textarea) {");
-    out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
-    out.println("   } else {");
-    out.println("       if(textarea.indexOf(\"fuck\") != -1) {");
+    out.println("       if((textarea.indexOf(\"fuck\") || textarea.indexOf(\"shit\") || textarea.indexOf(\"piss\") || textarea.indexOf(\"gay\")) != -1) {");
     out.println("           window.alert(\"Please omit innapropriate words!\");");
     out.println("       } else {");
-    out.println("           window.alert(\"Please input a comment!\");");
+    out.println("           window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("       }");
+    out.println("   } else {");
+    out.println("       window.alert(\"Please input a comment!\");");
     out.println("       event.preventDefault();");
     out.println("   }");
     out.println("}");
