@@ -73,29 +73,29 @@ private void PrintBody (PrintWriter out)
 //
 //    out.println("<script src=\"App.js\"></script>");
 //
-//    out.println("  <style type=\"text/css\">");
-//    out.println("  h1{");
-//    out.println("    text-align: center;");
-//    out.println("    font-size:3em;");
-//    out.println("  }");
-//    out.println("  h3{");
-//    out.println("  text-align: center;");
-//    out.println("    font-size:1.25em;");
-//    out.println("  }");
-//    out.println("  p{");
-//    out.println("    text-align: center;");
-//    out.println("  }");
-//    out.println("  body{");
-//    out.println("      background-color: lightyellow;");
-//    out.println("    padding-left: 10em;");
-//    out.println("    padding-right: 10em;");
-//    out.println("  }");
-//    out.println("  form{");
-//    out.println("    text-align: center;");
-//    out.println("  }");
-//    out.println("  </style>");
-//    out.println("</head>");
-//    out.println("");
+    out.println("  <style type=\"text/css\">");
+    out.println("  h1{");
+    out.println("    text-align: center;");
+    out.println("    font-size:3em;");
+    out.println("  }");
+    out.println("  h3{");
+    out.println("  text-align: center;");
+    out.println("    font-size:1.25em;");
+    out.println("  }");
+    out.println("  p{");
+    out.println("    text-align: center;");
+    out.println("  }");
+    out.println("  body{");
+    out.println("      background-color: lightyellow;");
+    out.println("    padding-left: 10em;");
+    out.println("    padding-right: 10em;");
+    out.println("  }");
+    out.println("  form{");
+    out.println("    text-align: center;");
+    out.println("  }");
+    out.println("  </style>");
+    out.println("</head>");
+    out.println("");
 //
 //
 //    out.println("<script type=\"text/babel\">");
