@@ -215,6 +215,7 @@ private void PrintBody (PrintWriter out)
     out.println("       } else {");
     out.println("           window.alert(\"Please input a comment!\");");
     out.println("       }");
+    out.println("       event.preventDefault();");
     out.println("   }");
     out.println("}");
     out.println("</script>");
