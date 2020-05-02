@@ -115,7 +115,7 @@ private void PrintBody (PrintWriter out)
     out.println("<h3>Please select a building</h3>");
     out.println("<!-- https://cs.gmu.edu:8443/offutt/servlet/formHandler -->");
 //    https://cs.gmu.edu:8443/offutt/servlet/formHandler
-    out.println("<form method=\"post\" onsubmit=\"getScore();\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
+    out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
     out.println("<select name=\"building\">");
     out.println("    <option value=\"Volgenau\" selected=\"selected\">Volgenau School of Engineering</option>");
     out.println("    <option value=\"Music\">Music Theater Building</option>");
@@ -185,7 +185,7 @@ private void PrintBody (PrintWriter out)
     out.println("</form>");
     out.println("");
     out.println("<script>");
-    out.println("function getScore(){");
+    out.println("function getScore(event){");
     out.println("   var i = 0;");
     out.println("   var odor = -1;");
     out.println("   var clean = -1;");
@@ -210,7 +210,7 @@ private void PrintBody (PrintWriter out)
     out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("   } else {");
     out.println("       window.alert(\"Please input a comment!\");");
-    out.println("       return false;");
+    out.println("       e.preventDefault();");
     out.println("   }");
     out.println("}");
     out.println("</script>");
