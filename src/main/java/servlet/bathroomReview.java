@@ -210,8 +210,8 @@ private void PrintBody (PrintWriter out)
     out.println("   if(textarea) {");
     out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("   } else {");
-    out.println("       if(textarea.includes(\"fuck\")) {");
-    out.println("           window.alert(\"Please ommit innapropriate words!\");");
+    out.println("       if(textarea.indexOf(\"fuck\") != -1) {");
+    out.println("           window.alert(\"Please omit innapropriate words!\");");
     out.println("       } else {");
     out.println("           window.alert(\"Please input a comment!\");");
     out.println("       }");
