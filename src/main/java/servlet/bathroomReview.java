@@ -178,14 +178,14 @@ private void PrintBody (PrintWriter out)
     out.println("  <br/><br/>");
     out.println("");
     out.println("");
-    out.println("    <button onclick=\"getScore()\">Submit</button>");
+    out.println("    <button onclick=\"getScore(e)\">Submit</button>");
     // out.println("    <p><a href=\"https://bathroomreview.herokuapp.com/assignment6\">SWE432 Assignment 6</a></p>");
     out.println("");
     out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
     out.println("</form>");
     out.println("");
     out.println("<script>");
-    out.println("function getScore(){");
+    out.println("function getScore(e) {");
     out.println("   var i = 0;");
     out.println("   var odor = -1;");
     out.println("   var clean = -1;");
@@ -210,7 +210,7 @@ private void PrintBody (PrintWriter out)
     out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("   } else {");
     out.println("       window.alert(\"Please input a comment!\");");
-    out.println("       return false;");
+    out.println("       e.preventDefault();");
     out.println("   }");
     out.println("}");
     out.println("</script>");
