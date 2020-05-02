@@ -178,7 +178,7 @@ private void PrintBody (PrintWriter out)
     out.println("  <br/><br/>");
     out.println("");
     out.println("");
-    out.println("    <button onclick=\"getScore()\">Submit</button>");
+    out.println("<button type=\"submit\" form=\"myForm\" value=\"Submit\">Submit</button>");
     // out.println("    <p><a href=\"https://bathroomreview.herokuapp.com/assignment6\">SWE432 Assignment 6</a></p>");
     out.println("");
     out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
