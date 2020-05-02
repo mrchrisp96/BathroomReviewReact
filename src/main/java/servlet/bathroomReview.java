@@ -210,12 +210,12 @@ private void PrintBody (PrintWriter out)
     out.println("   if(textarea.value) {");
     out.println("       window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("   } else {");
+    out.println("       event.preventDefault();");
     out.println("       if(textarea.includes('fuck') || textarea.includes('gay') || textarea.includes('shit') || textarea.includes('piss')) {");
     out.println("           window.alert(\"Please don't use innapropriate words!\");");
     out.println("       } else {");
     out.println("           window.alert(\"Please input a comment!\");");
     out.println("       }");
-    out.println("       event.preventDefault();");
     out.println("   }");
     out.println("}");
     out.println("</script>");
