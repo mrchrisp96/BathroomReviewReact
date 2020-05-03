@@ -61,6 +61,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     String building = request.getParameter("building");
     String cleanliness = request.getParameter("cleanliness");
     String odor = request.getParameter("odor");
+    String wouldUseAgain = request.getParameter("wouldUseAgain");
     String userComments = request.getParameter("userComments");
     
     out.println("<html>");
@@ -132,19 +133,19 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
-    out.println("            <td>dataaaaaaaa</td>");
+    out.println("            <td>" + cleanliness + "</td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Odor</th>");
-    out.println("            <td>dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>");
+    out.println("            <td>" + odor + "</td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Would you use this restroom again?</th>");
-    out.println("            <td>data</td>");
+    out.println("            <td>" + wouldUseAgain + "</td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Additional comments</th>");
-    out.println("            <td>dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>");
+    out.println("            <td>" + userComments + "</td>");
     out.println("        </tr>");
     out.println("   </table>");
     
