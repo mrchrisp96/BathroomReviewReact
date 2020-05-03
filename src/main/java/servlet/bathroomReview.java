@@ -115,7 +115,8 @@ private void PrintBody (PrintWriter out)
     out.println("<h3>Please select a building</h3>");
     out.println("<!-- https://cs.gmu.edu:8443/offutt/servlet/formHandler -->");
 //    https://cs.gmu.edu:8443/offutt/servlet/formHandler
-    out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
+//    \"https://bathroomreview.herokuapp.com/assignment7/results\"
+    out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"/results.php\" id=\"myForm\">");
     out.println("<select name=\"building\">");
     out.println("    <option value=\"Volgenau\" selected=\"selected\">Volgenau School of Engineering</option>");
     out.println("    <option value=\"Music\">Music Theater Building</option>");
