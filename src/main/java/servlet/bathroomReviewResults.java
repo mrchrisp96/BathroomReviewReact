@@ -92,7 +92,7 @@ private void PrintBody (PrintWriter out)
 //    out.println("    text-align: center;");
     out.println("  }");
     out.println("   table, th, td {");
-    out.println("       white-space:pre-line;");
+    out.println("       word-wrap: break-word;");
     out.println("       border: 1px solid black;");
     out.println("       padding: 10px;");
     out.println("       text-align: left;");
