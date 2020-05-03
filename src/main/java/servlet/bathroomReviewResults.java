@@ -122,6 +122,10 @@ private void PrintBody (PrintWriter out)
     out.println("  <br/><br/>");
     out.println("    <table text-align=\"left\" id=\"your-results\">");
     out.println("        <tr>");
+    out.println("            <th>Building</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
     out.println("            <td>data</td>");
     out.println("        </tr>");
@@ -141,11 +145,13 @@ private void PrintBody (PrintWriter out)
     
     out.println("  <br/><br/>");
     out.println("<hr class=\"rounded\">");
-    out.println("  <br/><br/>");
     
-    out.println("<p>Here are past review from everyone</p>");
+    out.println("<p>Here are past reviews from others</p>");
     out.println("    <table text-align=\"left\" id=\"past-results\">");
-    out.println("        <caption></caption>");
+    out.println("        <tr>");
+    out.println("            <th>Building</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
     out.println("            <td>data</td>");
