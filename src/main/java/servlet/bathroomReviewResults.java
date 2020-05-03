@@ -120,7 +120,6 @@ private void PrintBody (PrintWriter out)
     out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7\" id=\"myForm\">");
     out.println("");
     out.println("");
-    out.println("  <br/><br/>");
     out.println("");
     out.println("");
     out.println("</form>");
@@ -147,6 +146,7 @@ private void PrintBody (PrintWriter out)
     
     out.println("  <br/><br/>");
     out.println("<hr class=\"rounded\">");
+    out.println("  <br/><br/>");
     
     out.println("<p>Here are past review from everyone</p>");
     out.println("    <table text-align=\"left\" id=\"past-results\">");
