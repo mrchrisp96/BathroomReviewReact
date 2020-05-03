@@ -93,7 +93,7 @@ private void PrintBody (PrintWriter out)
     out.println("  }");
     out.println("   table, th, td {");
     out.println("       border: 1px solid black;");
-    out.println("       padding: 15px;");
+    out.println("       padding: 10px;");
     out.println("       text-align: left;");
     out.println("   }");
     out.println("  </style>");
