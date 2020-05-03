@@ -94,7 +94,7 @@ private void PrintBody (PrintWriter out)
     out.println("   table, th, td {");
     out.println("       border: 1px solid black;");
     out.println("       padding: 15px;");
-    out.println("       text-aligh: left;");
+    out.println("       text-align: left;");
     out.println("   }");
     out.println("  </style>");
     out.println("</head>");
@@ -136,7 +136,7 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("</form>");
     
-    out.println("    <table text-align=\"left\" id=\"vertical-1\">");
+    out.println("    <table text-align=\"left\" id=\"your-results\">");
     out.println("        <caption>Here are your results!</caption>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
@@ -156,7 +156,27 @@ private void PrintBody (PrintWriter out)
     out.println("        </tr>");
     out.println("   </table>");
     
-//    out.println("<p>Here are past review from everyone: </p>");
+    out.println("<p>Here are past review from everyone</p>");
+    out.println("    <table text-align=\"left\" id=\"past-results\">");
+    out.println("        <caption>Here are your results!</caption>");
+    out.println("        <tr>");
+    out.println("            <th>Cleanliness</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("        <tr>");
+    out.println("            <th>Odor</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("        <tr>");
+    out.println("            <th>Would you use this restroom again?</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("        <tr>");
+    out.println("            <th>Additional comments</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("   </table>");
+    
 
     out.println("");
     out.println("</body>");
