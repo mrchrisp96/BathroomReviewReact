@@ -112,32 +112,16 @@ private void PrintBody (PrintWriter out)
     out.println("<body>");
     out.println("");
     out.println("<div id=\"root\"></div>");
-    out.println("<p>Here's your results!</p>");
     out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7\" id=\"myForm\">");
     out.println("");
-    out.println("    <h3>");
-    out.println("        Cleanliness");
-    out.println("    </h3>");
-    out.println("");
-    out.println("    <h3>");
-    out.println("        Odor");
-    out.println("    </h3>");
-    out.println("");
-    out.println("    <h3>");
-    out.println("    Would you use this restroom again?<br/>");
-    out.println("  </h3>");
-    out.println("");
-    out.println("<h3>");
-    out.println("    Additional comments");
-    out.println("</h3>");
     out.println("");
     out.println("  <br/><br/>");
     out.println("");
     out.println("");
     out.println("</form>");
-    
+    out.println("<p>Here are your results!</p>");
+    out.println("  <br/><br/>");
     out.println("    <table text-align=\"left\" id=\"your-results\">");
-    out.println("        <caption>Here are your results!</caption>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
     out.println("            <td>data</td>");
@@ -158,7 +142,7 @@ private void PrintBody (PrintWriter out)
     
     out.println("<p>Here are past review from everyone</p>");
     out.println("    <table text-align=\"left\" id=\"past-results\">");
-    out.println("        <caption>Here are your results!</caption>");
+    out.println("        <caption></caption>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
     out.println("            <td>data</td>");
@@ -176,8 +160,8 @@ private void PrintBody (PrintWriter out)
     out.println("            <td>data</td>");
     out.println("        </tr>");
     out.println("   </table>");
-    
-
+    out.println("  <br/><br/>");
+    out.println("  <br/><br/>");
     out.println("");
     out.println("</body>");
     out.println("</html>");
