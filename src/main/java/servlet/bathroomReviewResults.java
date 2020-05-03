@@ -175,6 +175,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     out.println("            <td>data</td>");
     out.println("        </tr>");
     out.println("   </table>");
+    out.println("  & #8226;");
     out.println("  <br/><br/>");
     out.println("");
     out.println("</body>");
