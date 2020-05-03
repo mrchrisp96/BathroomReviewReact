@@ -105,7 +105,6 @@ private void PrintBody (PrintWriter out)
     out.println("</head>");
     out.println("");
 //
-//
     out.println("<script type=\"text/babel\">");
     out.println("const Hello = () => {");
     out.println("return (");
@@ -118,9 +117,6 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("<div id=\"root\"></div>");
     out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7\" id=\"myForm\">");
-    out.println("");
-    out.println("");
-    out.println("");
     out.println("");
     out.println("</form>");
     out.println("<p>Here are your results!</p>");
@@ -168,7 +164,6 @@ private void PrintBody (PrintWriter out)
     out.println("            <td>data</td>");
     out.println("        </tr>");
     out.println("   </table>");
-    out.println("  <br/><br/>");
     out.println("  <br/><br/>");
     out.println("");
     out.println("</body>");
