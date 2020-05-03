@@ -97,7 +97,7 @@ private void PrintBody (PrintWriter out)
     out.println("       text-align: left;");
     out.println("   }");
     out.println("   hr.rounded {");
-    out.println("       border-top: 8px solid #bbb;");
+    out.println("       border-top: 8px solid black;");
     out.println("       border-radius: 5px;");
     out.println("       border-radius: 5px;");
     out.println("   }");
@@ -145,6 +145,7 @@ private void PrintBody (PrintWriter out)
     out.println("        </tr>");
     out.println("   </table>");
     
+    out.println("  <br/><br/>");
     out.println("<hr class=\"rounded\">");
     
     out.println("<p>Here are past review from everyone</p>");
