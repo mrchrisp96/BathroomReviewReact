@@ -118,13 +118,13 @@ private void PrintBody (PrintWriter out)
 //    \"https://bathroomreview.herokuapp.com/assignment7/results\"
     out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
     out.println("<select name=\"building\">");
-    out.println("    <option value=\"Volgenau\" selected=\"selected\">Volgenau School of Engineering</option>");
-    out.println("    <option value=\"Music\">Music Theater Building</option>");
+    out.println("    <option value=\"Volgenau School of Engineering\" selected=\"selected\">Volgenau School of Engineering</option>");
+    out.println("    <option value=\"Music Theater Building\">Music Theater Building</option>");
     out.println("    <option value=\"SUB1\">Sub1</option>");
-    out.println("    <option value=\"HUB\">The Hub</option>");
-    out.println("    <option value=\"deLaski\">deLaski Performing Arts Building</option>");
-    out.println("    <option value=\"Planetary\">Planetary Hall</option>");
-    out.println("    <option value=\"Innovation\">Innovation Hall</option>");
+    out.println("    <option value=\"The Hub\">The Hub</option>");
+    out.println("    <option value=\"deLaski Performing Arts Building\">deLaski Performing Arts Building</option>");
+    out.println("    <option value=\"Planetary Hall\">Planetary Hall</option>");
+    out.println("    <option value=\"Innovation Hall\">Innovation Hall</option>");
     out.println("");
     out.println("</select>");
     out.println("");
@@ -132,7 +132,7 @@ private void PrintBody (PrintWriter out)
     out.println("        Cleanliness");
     out.println("    </h3>");
     out.println("    <p style=“text-align:justify”>");
-    out.println("    <input type=\"radio\" name=\"cleanliness\" id=\"veryDirty\" value=\"veryDirty\" checked/>");
+    out.println("            <input type=\"radio\" name=\"cleanliness\" id=\"veryDirty\" value=\"Very Dirty\" checked/>");
     out.println("    <label for=\"veryDirty\">Very Dirty</label>");
     out.println("            <input type=\"radio\" name=\"cleanliness\" id=\"dirty\" value=\"dirty\" />");
     out.println("    <label for=\"dirty\">Dirty</label>");
