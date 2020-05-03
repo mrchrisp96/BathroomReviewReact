@@ -97,8 +97,7 @@ private void PrintBody (PrintWriter out)
     out.println("       text-align: left;");
     out.println("   }");
     out.println("   hr.rounded {");
-    out.println("       border-top: 8px solid black;");
-    out.println("       border-radius: 5px;");
+    out.println("       border-top: 5px solid black;");
     out.println("       border-radius: 5px;");
     out.println("   }");
     out.println("  </style>");
