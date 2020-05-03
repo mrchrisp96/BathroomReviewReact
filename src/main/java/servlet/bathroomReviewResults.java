@@ -95,7 +95,6 @@ private void PrintBody (PrintWriter out)
     out.println("       border: 1px solid black;");
     out.println("       padding: 10px;");
     out.println("       text-align: left;");
-    out.println("       style=\"min-width:1000px;\"");
     out.println("       style=\"max-width:1000px;\"");
     out.println("   }");
     out.println("   hr.rounded {");
@@ -122,7 +121,7 @@ private void PrintBody (PrintWriter out)
     out.println("</form>");
     out.println("<p>Here are your results!</p>");
     out.println("<br/><br/>");
-    out.println("    <table text-align=\"left\" id=\"your-results\" style=\"width:400px\">");
+    out.println("    <table text-align=\"left\" id=\"your-results\">");
     out.println("        <tr>");
     out.println("            <th>Building</th>");
     out.println("            <td><?=$_POST['Volgenau']?></td>");
@@ -150,7 +149,7 @@ private void PrintBody (PrintWriter out)
     
     out.println("<p>Here are past reviews from others</p>");
     out.println("  <br/><br/>");
-    out.println("    <table text-align=\"left\" id=\"past-results\" >");
+    out.println("    <table text-align=\"left\" id=\"past-results\">");
     out.println("        <tr>");
     out.println("            <th>Building</th>");
     out.println("            <td>data</td>");
