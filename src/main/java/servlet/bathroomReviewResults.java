@@ -104,13 +104,11 @@ private void PrintBody (PrintWriter out)
     out.println("}");
     out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
     out.println("</script>");
-//
     out.println("<body>");
     out.println("");
     out.println("<div id=\"root\"></div>");
     out.println("<p>Here's your results!</p>");
-    out.println("<h3>Please select a building</h3>");
-    out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
+    out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7\" id=\"myForm\">");
     out.println("");
     out.println("    <h3>");
     out.println("        Cleanliness");
@@ -132,6 +130,29 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("");
     out.println("</form>");
+    
+    out.println("    <table id=\"vertical-1\">");
+    out.println("        <caption>Here are your results!</caption>");
+    out.println("        <tr>");
+    out.println("            <th>Cleanliness</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("        <tr>");
+    out.println("            <th>Odor</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("        <tr>");
+    out.println("            <th>Would you use this restroom again?</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("        <tr>");
+    out.println("            <th>Additional comments</th>");
+    out.println("            <td>data</td>");
+    out.println("        </tr>");
+    out.println("   </table>");
+    
+//    out.println("<p>Here are past review from everyone: </p>");
+
     out.println("");
     out.println("</body>");
     out.println("</html>");

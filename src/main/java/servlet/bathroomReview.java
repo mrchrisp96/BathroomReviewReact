@@ -178,14 +178,14 @@ private void PrintBody (PrintWriter out)
     out.println("  <br/><br/>");
     out.println("");
     out.println("");
-    out.println("<button type=\"submit\" form=\"myForm\" value=\"Submit\">Submit</button>");
+    out.println("<button type=\"submit\" formmethod=\"post\" form=\"myForm\" value=\"Submit\">Submit</button>");
     // out.println("    <p><a href=\"https://bathroomreview.herokuapp.com/assignment6\">SWE432 Assignment 6</a></p>");
     out.println("");
     out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
     out.println("</form>");
     out.println("");
     out.println("<script>");
-    out.println("function getScore(event){");
+    out.println("function getScore(event) {");
     out.println("   var i = 0;");
     out.println("   var odor = -1;");
     out.println("   var clean = -1;");
@@ -208,7 +208,7 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
     out.println("   if(textarea) {");
-    out.println("       if((textarea.indexOf(\"fuck\") != -1) || (textarea.indexOf(\"shit\") != -1) || (textarea.indexOf(\"gay\") != -1)) {");
+    out.println("       if((textarea.indexOf(\"fuck\") != -1) || (textarea.indexOf(\"shit\") != -1) || (textarea.indexOf(\"gay\") != -1) || (textarea.indexOf(\"fag\") != -1)) {");
     out.println("           window.alert(\"Please omit innapropriate words!\");");
     out.println("           event.preventDefault();");
     out.println("       } else {");
