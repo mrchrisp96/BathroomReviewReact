@@ -11,7 +11,7 @@ import javax.servlet.http.*;
 
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet( name = "results", urlPatterns = {"/assignment7/results.php"} )
+@WebServlet( name = "results", urlPatterns = {"/assignment7/results"} )
 public class bathroomReviewResults extends HttpServlet {
 
 // Location of servlet.
@@ -28,10 +28,10 @@ static String Domain  = "bathroomreview.herokuapp.com";
 public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
-   response.setContentType("text/html");
-   PrintWriter out = response.getWriter();
-   PrintBody(out);
-   PrintTail(out);
+    response.setContentType("text/html");
+    PrintWriter out = response.getWriter();
+    PrintBody(out, request);
+    PrintTail(out);
 }  // End doPost
 
 /** *****************************************************
@@ -56,8 +56,12 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
  *  Prints the <BODY> of the HTML page with the form data
  *  values from the parameters.
 ********************************************************* */
-private void PrintBody (PrintWriter out)
+private void PrintBody (PrintWriter out, HttpServletRequest request)
 {
+    String building = request.getParameter("building");
+    String cleanliness = request.getParameter("cleanliness");
+    String odor = request.getParameter("odor");
+    String userComments = request.getParameter("userComments");
     
     out.println("<html>");
     out.println("<head>");
@@ -89,9 +93,6 @@ private void PrintBody (PrintWriter out)
     out.println("    padding-left: 10em;");
     out.println("    padding-right: 10em;");
     out.println("  }");
-    out.println("  form{");
-//    out.println("    text-align: center;");
-    out.println("  }");
     out.println("   table, th, td {");
     out.println("       word-wrap: break-word;");
     out.println("       border: 1px solid black;");
@@ -122,14 +123,12 @@ private void PrintBody (PrintWriter out)
     out.println("<body>");
     out.println("");
     out.println("<div id=\"root\"></div>");
-    out.println("<form method=\"get\" action=\"https://bathroomreview.herokuapp.com/assignment7\" id=\"myForm\">");
     out.println("");
-    out.println("</form>");
-    out.println("<p>Here are your results!</p>");
+    out.println("<p>Review Results</p>");
     out.println("    <table text-align=\"left\" id=\"your-results\">");
     out.println("        <tr>");
     out.println("            <th>Building</th>");
-    out.println("            <td><?=$_POST['Volgenau']?></td>");
+    out.println("            <td>" + building + "</td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
@@ -152,7 +151,7 @@ private void PrintBody (PrintWriter out)
     out.println("<br/><br/>");
     out.println("<hr class=\"rounded\">");
     
-    out.println("<p>Here are past reviews from others</p>");
+    out.println("<p>All Past Reviews</p>");
     out.println("    <table text-align=\"left\" id=\"past-results\">");
     out.println("        <tr>");
     out.println("            <th>Building</th>");
