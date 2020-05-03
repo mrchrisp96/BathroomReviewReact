@@ -131,7 +131,7 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("</form>");
     
-    out.println("    <table id=\"vertical-1\">");
+    out.println("    <table align=\"left\" id=\"vertical-1\">");
     out.println("        <caption>Here are your results!</caption>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
