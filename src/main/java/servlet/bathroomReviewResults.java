@@ -82,6 +82,7 @@ private void PrintBody (PrintWriter out)
     out.println("  }");
     out.println("  p{");
     out.println("    text-align: center;");
+    out.println("    font-size:2em;");
     out.println("  }");
     out.println("  body{");
     out.println("      background-color: lightyellow;");
@@ -125,7 +126,6 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("</form>");
     out.println("<p>Here are your results!</p>");
-    out.println("<br/><br/>");
     out.println("    <table text-align=\"left\" id=\"your-results\">");
     out.println("        <tr>");
     out.println("            <th>Building</th>");
@@ -153,7 +153,6 @@ private void PrintBody (PrintWriter out)
     out.println("<hr class=\"rounded\">");
     
     out.println("<p>Here are past reviews from others</p>");
-    out.println("  <br/><br/>");
     out.println("    <table text-align=\"left\" id=\"past-results\">");
     out.println("        <tr>");
     out.println("            <th>Building</th>");
