@@ -123,7 +123,7 @@ private void PrintBody (PrintWriter out)
     out.println("    <table text-align=\"left\" id=\"your-results\" style=\"width:400px\">");
     out.println("        <tr>");
     out.println("            <th>Building</th>");
-    out.println("            <td><?=$_POST['building']?></td>");
+    out.println("            <td><?=$_POST['Volgenau']?></td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
