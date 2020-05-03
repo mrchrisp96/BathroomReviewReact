@@ -89,8 +89,11 @@ private void PrintBody (PrintWriter out)
     out.println("    padding-right: 10em;");
     out.println("  }");
     out.println("  form{");
-    out.println("    text-align: center;");
+//    out.println("    text-align: center;");
     out.println("  }");
+    out.println("   table, th, td {");
+    out.println("       border: 1px solid black;");
+    out.println("   }");
     out.println("  </style>");
     out.println("</head>");
     out.println("");
@@ -131,7 +134,7 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("</form>");
     
-    out.println("    <table align=\"left\" id=\"vertical-1\">");
+    out.println("    <table text-align=\"left\" id=\"vertical-1\">");
     out.println("        <caption>Here are your results!</caption>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
