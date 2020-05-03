@@ -95,7 +95,7 @@ private void PrintBody (PrintWriter out)
     out.println("       border: 1px solid black;");
     out.println("       padding: 10px;");
     out.println("       text-align: left;");
-    out.println("       style=\"max-width:50px\"");
+    out.println("       table-layout: fixed;");
     out.println("   }");
     out.println("   hr.rounded {");
     out.println("       border-top: 5px solid black;");
