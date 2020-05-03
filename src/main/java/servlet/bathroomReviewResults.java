@@ -139,7 +139,7 @@ private void PrintBody (PrintWriter out)
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Additional comments</th>");
-    out.println("            <td>dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>");
+    out.println("            <td>dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>");
     out.println("        </tr>");
     out.println("   </table>");
     
