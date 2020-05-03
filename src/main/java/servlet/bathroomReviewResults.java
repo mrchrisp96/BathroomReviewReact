@@ -96,6 +96,11 @@ private void PrintBody (PrintWriter out)
     out.println("       padding: 10px;");
     out.println("       text-align: left;");
     out.println("   }");
+    out.println("   hr.rounded {");
+    out.println("       border-top: 8px solid #bbb;");
+    out.println("       border-radius: 5px;");
+    out.println("       border-radius: 5px;");
+    out.println("   }");
     out.println("  </style>");
     out.println("</head>");
     out.println("");
@@ -139,6 +144,8 @@ private void PrintBody (PrintWriter out)
     out.println("            <td>data</td>");
     out.println("        </tr>");
     out.println("   </table>");
+    
+    out.println("<hr class=\"rounded\">");
     
     out.println("<p>Here are past review from everyone</p>");
     out.println("    <table text-align=\"left\" id=\"past-results\">");
