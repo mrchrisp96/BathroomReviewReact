@@ -11,7 +11,7 @@ import javax.servlet.http.*;
 
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet( name = "results", urlPatterns = {"/assignment7/results"} )
+@WebServlet( name = "results", urlPatterns = {"/result.php"} )
 public class bathroomReviewResults extends HttpServlet {
 
 // Location of servlet.
