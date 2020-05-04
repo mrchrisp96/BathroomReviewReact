@@ -215,7 +215,6 @@ private void PrintBody (PrintWriter out)
     out.println("   if (document.getElementById(\"yes\").checked) {");
     out.println("     would = 1;");
     out.println("   }");
-    
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
     out.println("   if(textarea) {");
@@ -223,13 +222,13 @@ private void PrintBody (PrintWriter out)
     out.println("           window.alert(\"Please omit innapropriate words!\");");
     out.println("           event.preventDefault();");
     out.println("       } else {");
-    out.println("           commentStr = document.getElementById(\"userComments\").value;");
-    out.println("           buildingStr = document.getElementById(\"building\");");
-    out.println("           let payLoad = [buildingStr, cleanStr, odorStr, would, commentStr]\n");
-    out.println("           set fso = CreateObject(\"Scripting.FileSystemObject\");");
-    out.println("           set s = fso.CreateTextFile(\"allReviews.txt\", True);");
-    out.println("           s.writeline(payLoad);");
-    out.println("           s.Close();");
+//    out.println("           commentStr = document.getElementById(\"userComments\").value;");
+//    out.println("           buildingStr = document.getElementById(\"building\");");
+//    out.println("           let payLoad = [buildingStr, cleanStr, odorStr, would, commentStr]\n");
+//    out.println("           set fso = CreateObject(\"Scripting.FileSystemObject\");");
+//    out.println("           set s = fso.CreateTextFile(\"allReviews.txt\", True);");
+//    out.println("           s.writeline(payLoad);");
+//    out.println("           s.Close();");
     out.println("           window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("       }");
     out.println("   } else {");
