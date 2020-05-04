@@ -193,10 +193,10 @@ private void PrintBody (PrintWriter out)
     out.println("   var clean = -1;");
     out.println("   var would = 0;");
     
-    out.println("   var buildingStr = "";");
-    out.println("   var cleanStr = "";");
-    out.println("   var odorStr = "";");
-    out.println("   var commentStr = "";");
+    out.println("   var buildingStr;");
+    out.println("   var cleanStr;");
+    out.println("   var odorStr;");
+    out.println("   var commentStr;");
     
     out.println("   var textarea = document.getElementById(\"userComments\").value.toLowerCase();");
     out.println("   let cIDs = [\"veryDirty\",\"dirty\",\"slightlyMessy\",\"mostlyClean\",\"completelyClean\"];");
