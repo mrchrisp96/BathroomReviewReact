@@ -186,7 +186,7 @@ private void PrintBody (PrintWriter out)
     out.println("</form>");
     out.println("");
     out.println("<script>");
-    out.println("function getScore(event) {");
+    out.println("function getScore(event, passForm) {");
 
     out.println("   var i = 0;");
     out.println("   var odor = -1;");
@@ -226,11 +226,11 @@ private void PrintBody (PrintWriter out)
     out.println("           window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("           commentStr = document.getElementById(\"userComments\").value;");
     out.println("           buildingStr = document.getElementById(\"building\");");
-    out.println("           const fs = require('fs')");
-    out.println("           let payLoad = { buildingStr, cleanStr, odorStr, would, commentStr }\n");
-    out.println("           fs.writeFile('reviews.txt', payLoad, (err) => {");
-    out.println("               if (err) throw err;");
-    out.printlnf("          })");
+    out.println("           let payLoad = [buildingStr, cleanStr, odorStr, would, commentStr]\n");
+    out.println("           set fso = CreateObject(\"Scripting.FileSystemObject\");");
+    out.println("           set s = fso.CreateTextFile(\"allReviews.txt\", True);");
+    out.println("           s.writeline(payLoad);");
+    out.println("           s.Close();");
     out.println("       }");
     out.println("   } else {");
     out.println("       window.alert(\"Please input a comment!\");");
