@@ -117,7 +117,7 @@ private void PrintBody (PrintWriter out)
 //    https://cs.gmu.edu:8443/offutt/servlet/formHandler
 //    \"https://bathroomreview.herokuapp.com/assignment7/results\"
     out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
-    out.println("<select name=\"building\">");
+    out.println("<select name=\"building\" id=\"building\">");
     out.println("    <option value=\"Volgenau School of Engineering\" selected=\"selected\">Volgenau School of Engineering</option>");
     out.println("    <option value=\"Music Theater Building\">Music Theater Building</option>");
     out.println("    <option value=\"SUB1\">Sub1</option>");
@@ -187,25 +187,35 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("<script>");
     out.println("function getScore(event) {");
+
     out.println("   var i = 0;");
     out.println("   var odor = -1;");
     out.println("   var clean = -1;");
     out.println("   var would = 0;");
+    
+    out.println("   var buildingStr = "";");
+    out.println("   var cleanStr = "";");
+    out.println("   var odorStr = "";");
+    out.println("   var commentStr = "";");
+    
     out.println("   var textarea = document.getElementById(\"userComments\").value.toLowerCase();");
     out.println("   let cIDs = [\"veryDirty\",\"dirty\",\"slightlyMessy\",\"mostlyClean\",\"completelyClean\"];");
     out.println("   let oIDs = [\"unbearable\",\"unpleasant\",\"moderate\",\"unnoticeable\",\"fresh\"];");
-    out.println("   while (i<5){");
+    out.println("   while (i<5) {");
     out.println("     if (document.getElementById(cIDs[i]).checked){");
     out.println("       clean = i;");
+    out.println("       cleanStr = document.getElementById(cIDs[i]);");
     out.println("     }");
     out.println("     if (document.getElementById(oIDs[i]).checked){");
     out.println("       odor = i;");
+    out.println("       odorStr = document.getElementById(oIDs[i]);");
     out.println("     }");
     out.println("     i = i + 1;");
     out.println("   }");
     out.println("   if (document.getElementById(\"yes\").checked) {");
     out.println("     would = 1;");
     out.println("   }");
+    
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
     out.println("   if(textarea) {");
@@ -214,6 +224,13 @@ private void PrintBody (PrintWriter out)
     out.println("           event.preventDefault();");
     out.println("       } else {");
     out.println("           window.alert(\"Restroom review score: \" + score + \" out of 100\");");
+    out.println("           commentStr = document.getElementById(\"userComments\").value;");
+    out.println("           buildingStr = document.getElementById(\"building\");");
+    out.println("           const fs = require('fs')");
+    out.println("           let payLoad = { buildingStr, cleanStr, odorStr, would, commentStr }\n");
+    out.println("           fs.writeFile('reviews.txt', payLoad, (err) => {");
+    out.println("               if (err) throw err;");
+    out.printlnf("          })");
     out.println("       }");
     out.println("   } else {");
     out.println("       window.alert(\"Please input a comment!\");");
