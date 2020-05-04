@@ -186,7 +186,7 @@ private void PrintBody (PrintWriter out)
     out.println("</form>");
     out.println("");
     out.println("<script>");
-    out.println("function getScore(event, passForm) {");
+    out.println("function getScore(event) {");
 
     out.println("   var i = 0;");
     out.println("   var odor = -1;");
@@ -198,7 +198,7 @@ private void PrintBody (PrintWriter out)
     out.println("   var odorStr;");
     out.println("   var commentStr;");
     
-    out.println("   var textarea = document.getElementById(\"userComments\").value;");
+    out.println("   var textarea = document.getElementById(\"userComments\").value.toLowerCase();");
     out.println("   let cIDs = [\"veryDirty\",\"dirty\",\"slightlyMessy\",\"mostlyClean\",\"completelyClean\"];");
     out.println("   let oIDs = [\"unbearable\",\"unpleasant\",\"moderate\",\"unnoticeable\",\"fresh\"];");
     out.println("   while (i<5) {");
@@ -219,7 +219,7 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
     out.println("   if(textarea) {");
-    out.println("       if((textarea.toLowerCase().indexOf(\"fuck\") != -1) || (textarea.toLowerCase().indexOf(\"shit\") != -1) || (textarea.toLowerCase().indexOf(\"gay\") != -1) || (textarea.toLowerCase().indexOf(\"fag\") != -1)) {");
+    out.println("       if((textarea.indexOf(\"fuck\") != -1) || (textarea.indexOf(\"shit\") != -1) || (textarea.indexOf(\"gay\") != -1) || (textarea.indexOf(\"fag\") != -1)) {");
     out.println("           window.alert(\"Please omit innapropriate words!\");");
     out.println("           event.preventDefault();");
     out.println("       } else {");
