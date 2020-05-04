@@ -198,7 +198,7 @@ private void PrintBody (PrintWriter out)
     out.println("   var odorStr;");
     out.println("   var commentStr;");
     
-    out.println("   var textarea = document.getElementById(\"userComments\").value.toLowerCase();");
+    out.println("   var textarea = document.getElementById(\"userComments\").value;");
     out.println("   let cIDs = [\"veryDirty\",\"dirty\",\"slightlyMessy\",\"mostlyClean\",\"completelyClean\"];");
     out.println("   let oIDs = [\"unbearable\",\"unpleasant\",\"moderate\",\"unnoticeable\",\"fresh\"];");
     out.println("   while (i<5) {");
@@ -219,11 +219,10 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("   let score = (12 * clean) + (8 * odor) + (would * 20);");
     out.println("   if(textarea) {");
-    out.println("       if((textarea.indexOf(\"fuck\") != -1) || (textarea.indexOf(\"shit\") != -1) || (textarea.indexOf(\"gay\") != -1) || (textarea.indexOf(\"fag\") != -1)) {");
+    out.println("       if((textarea.toLowerCase().indexOf(\"fuck\") != -1) || (textarea.toLowerCase().indexOf(\"shit\") != -1) || (textarea.toLowerCase().indexOf(\"gay\") != -1) || (textarea.toLowerCase().indexOf(\"fag\") != -1)) {");
     out.println("           window.alert(\"Please omit innapropriate words!\");");
     out.println("           event.preventDefault();");
     out.println("       } else {");
-    out.println("           window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("           commentStr = document.getElementById(\"userComments\").value;");
     out.println("           buildingStr = document.getElementById(\"building\");");
     out.println("           let payLoad = [buildingStr, cleanStr, odorStr, would, commentStr]\n");
@@ -231,6 +230,7 @@ private void PrintBody (PrintWriter out)
     out.println("           set s = fso.CreateTextFile(\"allReviews.txt\", True);");
     out.println("           s.writeline(payLoad);");
     out.println("           s.Close();");
+    out.println("           window.alert(\"Restroom review score: \" + score + \" out of 100\");");
     out.println("       }");
     out.println("   } else {");
     out.println("       window.alert(\"Please input a comment!\");");
