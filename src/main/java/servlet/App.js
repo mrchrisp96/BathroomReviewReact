@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
-class App extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.sayHello = this.sayHello.bind(this);
-  }
+const App = () => {
+  const [ spinner, setSpinner ] = useState(true);
 
-  sayHello() {
-    alert('Hello!');
-  }
-  
-  return (
-    <button onClick={this.sayHello}>
-      Click me!
-    </button>
-  );
-}
+  // It will be executed before rendering
+
+  useEffect(() => {
+    setTimeout(() => setSpinner(false), 1000)
+  }, []);
+
+  // [] means like componentDidMount
+
+  return !spinner && <div>Your content</div>;
+};
 
 export default App;
