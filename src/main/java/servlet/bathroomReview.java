@@ -109,8 +109,8 @@ private void PrintBody (PrintWriter out)
     out.println("<script src=\"Fetcher.js\"></script>");
     out.println("<body>");
     out.println("");
-    out.println("<div id=\"root\"></div>");
-    out.println("<p>GMU Bathroom Reviewer</p>");
+//    out.println("<div id=\"root\"></div>");
+    out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
     out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
