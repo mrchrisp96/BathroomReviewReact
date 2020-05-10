@@ -155,7 +155,6 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
         out.println("<p>");
         out.println("<a href=\"https://bathroomreview.herokuapp.com/assignment7\"> <button>New review</button></a>");
         out.println("</p>");
-        out.println("<br/>");
     }
     out.println("<hr class=\"rounded\">");
     

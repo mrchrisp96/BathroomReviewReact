@@ -37,7 +37,6 @@ export default function Fetcher(props) {
 
     const doSomething = function (event) {
         console.log(event.currentTarget.getAttribute('data-something'));
-        setClicks(clicks + 1);
     }
     const handleChange = (event) => {
       setInputValue(event.target.value);

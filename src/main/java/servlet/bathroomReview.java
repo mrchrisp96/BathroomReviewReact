@@ -106,7 +106,7 @@ private void PrintBody (PrintWriter out)
 //    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
 //    out.println("</script>");
     
-    out.println("<script src=\"Fetcher.js\"></script>");
+    out.println("<script src=\"App.js\"></script>");
     out.println("<body>");
     out.println("");
 //    out.println("<div id=\"root\"></div>");
