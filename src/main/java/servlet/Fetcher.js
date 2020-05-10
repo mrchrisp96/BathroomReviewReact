@@ -12,7 +12,7 @@ export default function Fetcher(props) {
     const body = `input=${inputValue}&weekDay=${value}`;
 
     const  fetchData= async()=>{
-      const res = await fetch(url,
+      const res = await fetch('https://bathroomreview.herokuapp.com/assignment7',
         {
           method: 'POST', // *GET, POST, PUT, DELETE, etc.
           mode: 'cors', // no-cors, *cors, same-origin
