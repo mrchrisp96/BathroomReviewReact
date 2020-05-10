@@ -111,6 +111,7 @@ private void PrintBody (PrintWriter out)
     out.println("");
 //    out.println("<div id=\"root\">");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
+    out.println("<div id=\"root\"></div>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
     out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
@@ -182,6 +183,7 @@ private void PrintBody (PrintWriter out)
     out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
     out.println("</form>");
     out.println("");
+    out.println("<div id=\"root\"></div>");
     out.println("<script>");
     out.println("function getScore(event) {");
 
@@ -241,7 +243,6 @@ private void PrintBody (PrintWriter out)
     out.println("</script>");
     out.println("");
 //    out.println("</div>");
-    out.println("<div id=\"root\"></div>");
     out.println("</body>");
     out.println("</html>");
 
