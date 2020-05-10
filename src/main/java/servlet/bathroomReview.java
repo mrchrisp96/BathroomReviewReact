@@ -60,15 +60,13 @@ private void PrintBody (PrintWriter out)
     
     out.println("<html>");
     out.println("<head>");
-    out.println("  <title>");
-    out.println("  </title>");
-    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
-
-    out.println("<script src=\"js/react.development.min.js\"></script>");
-    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
-    out.println("<script src=\"js/browser.min.js\"></script>");
+//    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
+//    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
+//    out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
+//
+//    out.println("<script src=\"js/react.development.min.js\"></script>");
+//    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
+//    out.println("<script src=\"js/browser.min.js\"></script>");
     
     out.println("<script src=\"/javascript/App.js\"></script>");
     
@@ -109,9 +107,8 @@ private void PrintBody (PrintWriter out)
     
     out.println("<body>");
     out.println("");
-//    out.println("<div id=\"root\">");
+    out.println("<div id=\"root\">");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
-    out.println("<div id=\"root\"></div>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
     out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
@@ -183,7 +180,8 @@ private void PrintBody (PrintWriter out)
     out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
     out.println("</form>");
     out.println("");
-    out.println("<div id=\"root\"></div>");
+    out.println("</div>");
+
     out.println("<script>");
     out.println("function getScore(event) {");
 
@@ -242,7 +240,6 @@ private void PrintBody (PrintWriter out)
     out.println("}");
     out.println("</script>");
     out.println("");
-//    out.println("</div>");
     out.println("</body>");
     out.println("</html>");
 
