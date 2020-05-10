@@ -150,8 +150,9 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
         out.println("        </tr>");
         out.println("   </table>");
     } else {
-        out.println("<p>Click the button below to start a new review!");
-        out.println("<a href=\"https://bathroomreview.herokuapp.com/assignment7\"> <button>Submit another review</button></a>");
+        out.println("<p>Click the button below to start a new review!</p>");
+        out.println("<p>");
+        out.println("<a href=\"https://bathroomreview.herokuapp.com/assignment7\"> <button>New review</button></a>");
         out.println("</p>");
     }
     out.println("<br/><br/>");
