@@ -1,17 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles.css";
 
-const App = () => {
-  const [ spinner, setSpinner ] = useState(true);
+function App() {
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+  );
+}
 
-  // It will be executed before rendering
-
-  useEffect(() => {
-    setTimeout(() => setSpinner(false), 1000)
-  }, []);
-
-  // [] means like componentDidMount
-
-  return !spinner && <div>Your content</div>;
-};
-
-export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);

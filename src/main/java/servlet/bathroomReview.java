@@ -110,6 +110,7 @@ private void PrintBody (PrintWriter out)
 
     out.println("<body>");
     out.println("");
+    out.println("<div id=\"root\">");
 //    out.println("<div id=\"root\"></div>");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
@@ -241,6 +242,7 @@ private void PrintBody (PrintWriter out)
     out.println("}");
     out.println("</script>");
     out.println("");
+    out.println("</div>");
     out.println("</body>");
     out.println("</html>");
 
