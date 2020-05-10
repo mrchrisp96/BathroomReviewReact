@@ -97,24 +97,22 @@ private void PrintBody (PrintWriter out)
     out.println("");
     
 
-    out.println("<script type=\"text/babel\">");
-    out.println("const Hello = () => {");
-    out.println("return (");
-    out.println("<h1>GMU Bathroom Reviewer</h1>");
-    out.println(");");
-    out.println("}");
-    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
-    out.println("</script>");
-
+//    out.println("<script type=\"text/babel\">");
+//    out.println("const Hello = () => {");
+//    out.println("return (");
+//    out.println("<h1>GMU Bathroom Reviewer</h1>");
+//    out.println(");");
+//    out.println("}");
+//    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
+//    out.println("</script>");
+    
+    out.println("<script src=\"Fetcher.js\"></script>");
     out.println("<body>");
     out.println("");
     out.println("<div id=\"root\"></div>");
-    out.println("<script src=\"Fetcher.js\"></script>");
+    out.println("<p>GMU Bathroom Reviewer</p>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
-    out.println("<!-- https://cs.gmu.edu:8443/offutt/servlet/formHandler -->");
-//    https://cs.gmu.edu:8443/offutt/servlet/formHandler
-//    \"https://bathroomreview.herokuapp.com/assignment7/results\"
     out.println("<form method=\"post\" onsubmit=\"getScore(event);\" action=\"https://bathroomreview.herokuapp.com/assignment7/results\" id=\"myForm\">");
     out.println("<select name=\"building\" id=\"building\">");
     out.println("    <option value=\"Volgenau School of Engineering\" selected=\"selected\">Volgenau School of Engineering</option>");
