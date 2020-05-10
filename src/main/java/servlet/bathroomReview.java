@@ -70,6 +70,8 @@ private void PrintBody (PrintWriter out)
 //    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
 //    out.println("<script src=\"js/browser.min.js\"></script>");
     
+    out.println("<script src=\"/javascript/App.js\"></script>");
+    
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
     out.println("    text-align: center;");
@@ -104,11 +106,9 @@ private void PrintBody (PrintWriter out)
 //    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
 //    out.println("</script>");
     
-    out.println("<script src=\"/App.js\"></script>");
     
     out.println("<body>");
     out.println("");
-    out.println("<div id=\"root\"></div>");
 //    out.println("<div id=\"root\">");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
@@ -241,6 +241,7 @@ private void PrintBody (PrintWriter out)
     out.println("</script>");
     out.println("");
 //    out.println("</div>");
+    out.println("<div id=\"root\"></div>");
     out.println("</body>");
     out.println("</html>");
 
