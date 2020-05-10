@@ -149,36 +149,37 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
         out.println("            <td>" + userComments + "</td>");
         out.println("        </tr>");
         out.println("   </table>");
+        out.println("<br/><br/>");
     } else {
         out.println("<p>Click the button below to start a new review!</p>");
         out.println("<p>");
         out.println("<a href=\"https://bathroomreview.herokuapp.com/assignment7\"> <button>New review</button></a>");
         out.println("</p>");
+        out.println("<br/>");
     }
-    out.println("<br/><br/>");
     out.println("<hr class=\"rounded\">");
     
     out.println("<p>All Past Reviews</p>");
     out.println("    <table text-align=\"left\" id=\"past-results\">");
     out.println("        <tr>");
     out.println("            <th>Building</th>");
-    out.println("            <td>data</td>");
+    out.println("            <td>WIP</td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Cleanliness</th>");
-    out.println("            <td>data</td>");
+    out.println("            <td>WIP</td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Odor</th>");
-    out.println("            <td>data</td>");
+    out.println("            <td>WIP</td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Would you use this restroom again?</th>");
-    out.println("            <td>data</td>");
+    out.println("            <td>WIP</td>");
     out.println("        </tr>");
     out.println("        <tr>");
     out.println("            <th>Additional comments</th>");
-    out.println("            <td>data</td>");
+    out.println("            <td>WIP</td>");
     out.println("        </tr>");
     out.println("   </table>");
     out.println("  <br/><br/>");
