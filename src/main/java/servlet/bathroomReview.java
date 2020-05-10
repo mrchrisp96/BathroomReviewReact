@@ -109,7 +109,7 @@ private void PrintBody (PrintWriter out)
     out.println("<body>");
     out.println("");
     out.println("<div id=\"root\"></div>");
-    out.println("<h1>GMU Bathroom Reviewer</h1>");
+    out.println("<script src=\"Fetcher.js\"></script>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
     out.println("<!-- https://cs.gmu.edu:8443/offutt/servlet/formHandler -->");
