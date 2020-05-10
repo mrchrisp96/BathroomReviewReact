@@ -62,16 +62,14 @@ private void PrintBody (PrintWriter out)
     out.println("<head>");
     out.println("  <title>");
     out.println("  </title>");
-    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
+//    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
+//    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
+//    out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
+//    
+//    out.println("<script src=\"js/react.development.min.js\"></script>");
+//    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
+//    out.println("<script src=\"js/browser.min.js\"></script>");
     
-    out.println("<script src=\"js/react.development.min.js\"></script>");
-    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
-    out.println("<script src=\"js/browser.min.js\"></script>");
-    
-    out.println("<script src=\"App.js\"></script>");
-
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
     out.println("    text-align: center;");
