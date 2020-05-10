@@ -107,7 +107,6 @@ private void PrintBody (PrintWriter out)
 //    out.println("</script>");
     
     out.println("<script src=\"Fetcher.js\"></script>");
-    out.print(new Gson().toJson(data));
     out.println("<body>");
     out.println("");
 //    out.println("<div id=\"root\"></div>");
