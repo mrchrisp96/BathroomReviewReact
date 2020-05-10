@@ -74,7 +74,6 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     out.println("<script src=\"js/react-dom.development.min.js\"></script>");
     out.println("<script src=\"js/browser.min.js\"></script>");
 
-    out.println("<script src=\"App.js\"></script>");
 //
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
@@ -183,6 +182,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     out.println("   </table>");
     out.println("  <br/><br/>");
     out.println("");
+    out.println("<script src=\"App.js\"></script>");
     out.println("</body>");
     out.println("</html>");
 

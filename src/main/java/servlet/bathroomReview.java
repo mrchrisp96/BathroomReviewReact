@@ -65,7 +65,7 @@ private void PrintBody (PrintWriter out)
 //    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
 //    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
 //    out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
-//    
+//
 //    out.println("<script src=\"js/react.development.min.js\"></script>");
 //    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
 //    out.println("<script src=\"js/browser.min.js\"></script>");
@@ -108,8 +108,7 @@ private void PrintBody (PrintWriter out)
 
     out.println("<body>");
     out.println("");
-    out.println("<div id=\"root\">");
-//    out.println("<div id=\"root\"></div>");
+//    out.println("<div id=\"root\">");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
@@ -240,7 +239,8 @@ private void PrintBody (PrintWriter out)
     out.println("}");
     out.println("</script>");
     out.println("");
-    out.println("</div>");
+    out.println("<div id=\"root\"></div>");
+//    out.println("</div>");
     out.println("</body>");
     out.println("</html>");
 
