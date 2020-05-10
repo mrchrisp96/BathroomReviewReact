@@ -10,4 +10,4 @@ var MyTemplate = React.createClass({
     }
 });
 
-ReactDOM.render(<p>Hello</p>, document.getElementById('root'));
+ReactDOM.render(<MyTemplate/>, document.getElementById('root'));
