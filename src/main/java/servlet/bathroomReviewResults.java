@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.ArrayList;
 
 //Import Servlet Libraries
 import javax.servlet.RequestDispatcher;
@@ -191,7 +192,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
         List<String> allLines = Files.readAllLines(Paths.get("allReviews.txt"));
         out.println("<p>Review Results</p>");
         for(String line: allLines) {
-            ArrayList<String> tempList = new ArrayList<>(Arrays.asList(line.split(","));
+            ArrayList<String> tempList = new ArrayList<>(Arrays.asList(line.split(",")));
             out.println("    <table text-align=\"left\" id=\"your-results\">");
             out.println("        <tr>");
             out.println("            <th>Building</th>");
