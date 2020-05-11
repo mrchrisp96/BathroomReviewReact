@@ -57,7 +57,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
     String userComments = request.getParameter("userComments");
     if(building != null) {
         try {
-            File file = new File("allReviews.txt");
+            File file = new File("allReview.txt");
             if (file.createNewFile()) {
                 System.out.println("File created: " + file.getName());
             } else {
@@ -190,7 +190,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     out.println("<hr class=\"rounded\">");
     
     try {
-        List<String> allLines = Files.readAllLines(Paths.get("allReviews.txt"));
+        List<String> allLines = Files.readAllLines(Paths.get("allReview.txt"));
         out.println("<p>Review Results</p>");
         for(String line: allLines) {
             List<String> tempList = Arrays.asList(line.split("\\s*,\\s*"));
