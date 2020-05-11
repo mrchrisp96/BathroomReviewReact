@@ -30,26 +30,9 @@ static String Domain  = "bathroomreview.herokuapp.com";
 public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
-    try {
-        File file = new File("allReviews.txt");
-        if (file.createNewFile()) {
-            System.out.println("File created: " + file.getName());
-        } else {
-            System.out.println("File already exists.");
-        }
-        // Add the reviews here
-        FileWriter myWriter = new FileWriter("allReviews.txt");
-        myWriter.write("");
-        myWriter.close();
-        file.close();
-    } catch (IOException e) {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
-    }
-    
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
-    PrintBody(out, request);
+    PrintBody(out);
     PrintTail(out);
 }  // End doPost
 
@@ -61,9 +44,26 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
        throws ServletException, IOException
 {
     //   RequestDispatcher view = request.getRequestDispatcher(indexpage);
+    try {
+        File file = new File("allReviews.txt");
+        if (file.createNewFile()) {
+            System.out.println("File created: " + file.getName());
+        } else {
+            System.out.println("File already exists.");
+        }
+        // Add the reviews here
+        FileWriter myWriter = new FileWriter("allReviews.txt");
+        myWriter.write("[]\n");
+        myWriter.close();
+        file.close();
+    } catch (IOException e) {
+        System.out.println("An error occurred.");
+        e.printStackTrace();
+    }
+    
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
-   PrintBody(out);
+   PrintBody(out, request);
    PrintTail(out);
 } // End doGet
 
