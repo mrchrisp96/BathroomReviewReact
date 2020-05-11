@@ -108,6 +108,8 @@ private void PrintBody (PrintWriter out)
     out.println("<body>");
     out.println("");
     out.println("<div id=\"root\"></div>");
+    out.println("<div id=\"badwords\">Please omit innapropriate words!</div>");
+    out.println("<div id=\"nowords\">Please enter a comment!</div>");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
@@ -239,7 +241,7 @@ private void PrintBody (PrintWriter out)
     out.println("   }");
     out.println("}");
     out.println("</script>");
-    out.println("<script type=\"text/javascript\" src=\"/Users/nan/BathroomReviewRJS/src/main/javascript/App.js\"></script>");
+    out.println("<script type=\"text/javascript\" src=\"javascript/App.js\"></script>");
     out.println("</body>");
     out.println("</html>");
     
