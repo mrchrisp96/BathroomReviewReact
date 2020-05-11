@@ -24,6 +24,16 @@ public class bathroomReviewResults extends HttpServlet {
 
 // Location of servlet.
 static String Domain  = "bathroomreview.herokuapp.com";
+    
+static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+static final String DB_URL = "jdbc:mysql://localhost/EMP";
+
+//  Database credentials
+static final String USER = "";
+static final String PASS = "";
+    
+final FirebaseDatabase database = FirebaseDatabase.getInstance();
+DatabaseReference ref = database.getReference("server/saving-data/fireblog");
 
 // Other strings.
 
@@ -97,14 +107,6 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     
     out.println("<html>");
     out.println("<head>");
-    out.println("<script src=\"https://unpkg.com/react@16.4.1/umd/react.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\"></script>");
-    out.println("<script src=\"https://unpkg.com/babel-standalone@6.15.0/babel.min.js\"></script>");
-
-    out.println("<script src=\"js/react.development.min.js\"></script>");
-    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
-    out.println("<script src=\"js/browser.min.js\"></script>");
-
 //
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
