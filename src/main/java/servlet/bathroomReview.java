@@ -107,9 +107,6 @@ private void PrintBody (PrintWriter out)
     
     out.println("<body>");
     out.println("");
-    out.println("<div id=\"root\"></div>");
-    out.println("<div id=\"badwords\">Please omit innapropriate words!</div>");
-    out.println("<div id=\"nowords\">Please enter a comment!</div>");
     out.println("<h1>GMU Bathroom Reviewer</h1>");
     out.println("<p>This web app allows you to review the bathrooms of a building at GMU in Fairfax</p>");
     out.println("<h3>Please select a building</h3>");
@@ -179,6 +176,7 @@ private void PrintBody (PrintWriter out)
     out.println("<button type=\"submit\" formmethod=\"post\" form=\"myForm\" value=\"Submit\">Submit</button>");
     // out.println("    <p><a href=\"https://bathroomreview.herokuapp.com/assignment6\">SWE432 Assignment 6</a></p>");
     out.println("");
+    out.println("<div id=\"root\"></div>");
     out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
     out.println("</form>");
     out.println("");
