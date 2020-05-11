@@ -192,7 +192,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
         List<String> allLines = Files.readAllLines(Paths.get("allReviews.txt"));
         out.println("<p>Review Results</p>");
         for(String line: allLines) {
-            ArrayList<String> tempList = new ArrayList<>(Arrays.asList(line.split(",")));
+            List<String> tempList = Arrays.asList(line.split("\\s*,\\s*"));
             out.println("    <table text-align=\"left\" id=\"your-results\">");
             out.println("        <tr>");
             out.println("            <th>Building</th>");
