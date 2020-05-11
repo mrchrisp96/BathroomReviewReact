@@ -7,4 +7,4 @@ class Test extends React.Component {
   }
 }
 
-ReactDOM.render(<Test />, document.getElementById('root'));
+ReactDOM.render(<Test />, document.getElementById('message'));
