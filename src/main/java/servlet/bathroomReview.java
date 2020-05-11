@@ -68,7 +68,7 @@ private void PrintBody (PrintWriter out)
 //    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
 //    out.println("<script src=\"js/browser.min.js\"></script>");
     
-    out.println("<script src=\"/javascript/App.js\"></script>");
+    out.println("<script src=\"/App.js\"></script>");
     
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
@@ -97,7 +97,6 @@ private void PrintBody (PrintWriter out)
     out.println("  </style>");
     out.println("</head>");
     out.println("");
-    
 
 //    out.println("<script type=\"text/babel\">");
 //    out.println("const Hello = () => {");
@@ -107,7 +106,6 @@ private void PrintBody (PrintWriter out)
 //    out.println("}");
 //    out.println("ReactDOM.render(<Hello/>, document.getElementById('root'));");
 //    out.println("</script>");
-    
     
     out.println("<body>");
     out.println("");
