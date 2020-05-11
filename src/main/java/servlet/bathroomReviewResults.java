@@ -3,8 +3,12 @@ package servlet;
 // Import Java Libraries
 import java.io.*;
 import java.util.*;
+
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.List;
 
 //Import Servlet Libraries
 import javax.servlet.RequestDispatcher;
@@ -44,20 +48,27 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
        throws ServletException, IOException
 {
     //   RequestDispatcher view = request.getRequestDispatcher(indexpage);
-    try {
-        File file = new File("allReviews.txt");
-        if (file.createNewFile()) {
-            System.out.println("File created: " + file.getName());
-        } else {
-            System.out.println("File already exists.");
+    String building = request.getParameter("building");
+    String cleanliness = request.getParameter("cleanliness");
+    String odor = request.getParameter("odor");
+    String wouldUseAgain = request.getParameter("wouldUseAgain");
+    String userComments = request.getParameter("userComments");
+    if(building != null) {
+        try {
+            File file = new File("allReviews.txt");
+            if (file.createNewFile()) {
+                System.out.println("File created: " + file.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+            // Add the reviews here
+            FileWriter myWriter = new FileWriter("allReviews.txt");
+            myWriter.write(building + "," + cleanliness + "," + odor + "," + wouldUseAgain + "," + comments + "\n");
+            myWriter.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
         }
-        // Add the reviews here
-        FileWriter myWriter = new FileWriter("allReviews.txt");
-        myWriter.write("[]\n");
-        myWriter.close();
-    } catch (IOException e) {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
     }
     
    response.setContentType("text/html");
@@ -142,6 +153,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     out.println("");
     out.println("<div id=\"root\"></div>");
     out.println("");
+    
     if(building != null) {
         out.println("<p>Review Results</p>");
         out.println("    <table text-align=\"left\" id=\"your-results\">");
@@ -175,32 +187,41 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     }
     out.println("<hr class=\"rounded\">");
     
-    out.println("<p>All Past Reviews</p>");
-    out.println("    <table text-align=\"left\" id=\"past-results\">");
-    out.println("        <tr>");
-    out.println("            <th>Building</th>");
-    out.println("            <td>WIP</td>");
-    out.println("        </tr>");
-    out.println("        <tr>");
-    out.println("            <th>Cleanliness</th>");
-    out.println("            <td>WIP</td>");
-    out.println("        </tr>");
-    out.println("        <tr>");
-    out.println("            <th>Odor</th>");
-    out.println("            <td>WIP</td>");
-    out.println("        </tr>");
-    out.println("        <tr>");
-    out.println("            <th>Would you use this restroom again?</th>");
-    out.println("            <td>WIP</td>");
-    out.println("        </tr>");
-    out.println("        <tr>");
-    out.println("            <th>Additional comments</th>");
-    out.println("            <td>WIP</td>");
-    out.println("        </tr>");
-    out.println("   </table>");
+    try {
+        List<String> allLines = Files.readAllLines(Paths.get("allReviews.txt"));
+        out.println("<p>Review Results</p>");
+        for(String line: allLines) {
+            ArrayList<String> tempList = new ArrayList<>(Arrays.asList(line.split(","));
+            out.println("    <table text-align=\"left\" id=\"your-results\">");
+            out.println("        <tr>");
+            out.println("            <th>Building</th>");
+            out.println("            <td>" + tempList[0] + "</td>");
+            out.println("        </tr>");
+            out.println("        <tr>");
+            out.println("            <th>Cleanliness</th>");
+            out.println("            <td>" + tempList[1] + "</td>");
+            out.println("        </tr>");
+            out.println("        <tr>");
+            out.println("            <th>Odor</th>");
+            out.println("            <td>" + tempList[2] + "</td>");
+            out.println("        </tr>");
+            out.println("        <tr>");
+            out.println("            <th>Would you use this restroom again?</th>");
+            out.println("            <td>" + tempList[3] + "</td>");
+            out.println("        </tr>");
+            out.println("        <tr>");
+            out.println("            <th>Additional comments</th>");
+            out.println("            <td>" + tempList[4] + "</td>");
+            out.println("        </tr>");
+            out.println("   </table>");
+            out.println("  <br/>");
+        }
+        scanner.close();
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    }
     out.println("  <br/><br/>");
     out.println("");
-    out.println("<script src=\"App.js\"></script>");
     out.println("</body>");
     out.println("</html>");
 
