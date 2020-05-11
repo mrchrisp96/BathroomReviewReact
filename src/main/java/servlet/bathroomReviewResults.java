@@ -89,7 +89,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     out.println("    font-size:2em;");
     out.println("  }");
     out.println("  body{");
-    out.println("      background-color: lightyellow;");
+    out.println("      background-color: lightblue;");
     out.println("    padding-left: 10em;");
     out.println("    padding-right: 10em;");
     out.println("  }");
