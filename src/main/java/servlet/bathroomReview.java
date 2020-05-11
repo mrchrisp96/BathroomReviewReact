@@ -181,7 +181,7 @@ private void PrintBody (PrintWriter out)
     out.println("</form>");
     out.println("");
 //    out.println("</div>");
-
+    out.println("<script type=\"text/javascript\" src=\"javascript/App.js\"></script>");
     out.println("<script>");
     out.println("function getScore(event) {");
 
@@ -239,7 +239,6 @@ private void PrintBody (PrintWriter out)
     out.println("   }");
     out.println("}");
     out.println("</script>");
-    out.println("<script type=\"text/javascript\" src=\"javascript/App.js\"></script>");
     out.println("</body>");
     out.println("</html>");
     
