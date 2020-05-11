@@ -239,7 +239,7 @@ private void PrintBody (PrintWriter out)
     out.println("   }");
     out.println("}");
     out.println("</script>");
-    out.println("<script type=\"text/javascript\" src=\"/App.js\"></script>");
+    out.println("<script type=\"text/javascript\" src=\"App.js\"></script>");
     out.println("</body>");
     out.println("</html>");
 
