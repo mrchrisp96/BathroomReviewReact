@@ -15,7 +15,7 @@ import javax.servlet.annotation.WebServlet;
 public class bathroomReview extends HttpServlet {
 
 // Location of servlet.
-static String Domain  = "bathroomreview.herokuapp.com";
+//static String Domain  = "bathroomreview.herokuapp.com";
 
 
 /** *****************************************************
