@@ -55,7 +55,6 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
         FileWriter myWriter = new FileWriter("allReviews.txt");
         myWriter.write("[]\n");
         myWriter.close();
-        file.close();
     } catch (IOException e) {
         System.out.println("An error occurred.");
         e.printStackTrace();
