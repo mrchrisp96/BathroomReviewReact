@@ -3,6 +3,8 @@ package servlet;
 // Import Java Libraries
 import java.io.*;
 import java.util.*;
+import java.io.File;
+import java.io.IOException;
 
 //Import Servlet Libraries
 import javax.servlet.RequestDispatcher;
@@ -11,7 +13,7 @@ import javax.servlet.http.*;
 
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet( name = "results", urlPatterns = {"/assignment7/results"} )
+@WebServlet( name = "results", urlPatterns = {"/assignment8/results"} )
 public class bathroomReviewResults extends HttpServlet {
 
 // Location of servlet.
@@ -28,6 +30,23 @@ static String Domain  = "bathroomreview.herokuapp.com";
 public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
+    try {
+        File file = new File("allReviews.txt");
+        if (file.createNewFile()) {
+            System.out.println("File created: " + file.getName());
+        } else {
+            System.out.println("File already exists.");
+        }
+        // Add the reviews here
+        FileWriter myWriter = new FileWriter("allReviews.txt");
+        myWriter.write("");
+        myWriter.close();
+        file.close();
+    } catch (IOException e) {
+        System.out.println("An error occurred.");
+        e.printStackTrace();
+    }
+    
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
     PrintBody(out, request);
@@ -44,7 +63,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
     //   RequestDispatcher view = request.getRequestDispatcher(indexpage);
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
-   PrintBody(out, request);
+   PrintBody(out);
    PrintTail(out);
 } // End doGet
 
@@ -152,7 +171,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
     } else {
         out.println("<p>Click the button below to start a new review!</p>");
         out.println("<p>");
-        out.println("<a href=\"https://bathroomreview.herokuapp.com/assignment7\"> <button>New review</button></a>");
+        out.println("<a href=\"https://bathroomreview.herokuapp.com/assignment8\"> <button>New review</button></a>");
         out.println("</p>");
     }
     out.println("<hr class=\"rounded\">");

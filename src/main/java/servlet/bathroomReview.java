@@ -11,7 +11,7 @@ import javax.servlet.http.*;
 
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet( name = "Assignment7", urlPatterns = {"/assignment7"} )
+@WebServlet( name = "Assignment8", urlPatterns = {"/assignment8"} )
 public class bathroomReview extends HttpServlet {
 
 // Location of servlet.
@@ -174,7 +174,6 @@ private void PrintBody (PrintWriter out)
     out.println("");
     out.println("");
     out.println("<button type=\"submit\" formmethod=\"post\" form=\"myForm\" value=\"Submit\">Submit</button>");
-    // out.println("    <p><a href=\"https://bathroomreview.herokuapp.com/assignment6\">SWE432 Assignment 6</a></p>");
     out.println("");
     out.println("<div id=\"message\"></div>");
     out.println("    <p><a href=\"https://github.com/mrchrisp96/BathroomReviewReact\">GitHub Executable Code</a></p>");
