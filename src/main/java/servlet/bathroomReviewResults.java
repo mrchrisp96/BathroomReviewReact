@@ -218,7 +218,7 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
             out.println("   </table>");
             out.println("  <br/>");
         }
-    } catch (FileNotFoundException e) {
+    } catch (IOException e) {
         e.printStackTrace();
     }
     out.println("  <br/><br/>");
