@@ -67,9 +67,7 @@ private void PrintBody (PrintWriter out)
 //    out.println("<script src=\"js/react.development.min.js\"></script>");
 //    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
 //    out.println("<script src=\"js/browser.min.js\"></script>");
-    
-    out.println("<script type=\"text/javascript\" src=\"/App.js\"></script>");
-    
+        
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
     out.println("    text-align: center;");
@@ -241,7 +239,7 @@ private void PrintBody (PrintWriter out)
     out.println("   }");
     out.println("}");
     out.println("</script>");
-    out.println("");
+    out.println("<script type=\"text/javascript\" src=\"/App.js\"></script>");
     out.println("</body>");
     out.println("</html>");
 
