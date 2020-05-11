@@ -68,7 +68,7 @@ private void PrintBody (PrintWriter out)
 //    out.println("<script src=\"js/react-dom.development.min.js\"></script>");
 //    out.println("<script src=\"js/browser.min.js\"></script>");
     
-    out.println("<script src=\"/App.js\"></script>");
+    out.println("<script type=\"text/javascript\" src=\"/App.js\"></script>");
     
     out.println("  <style type=\"text/css\">");
     out.println("  h1{");
