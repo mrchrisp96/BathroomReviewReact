@@ -6,6 +6,7 @@ import java.util.*;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.nio.file.Files;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
@@ -64,7 +65,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
             }
             // Add the reviews here
             FileWriter myWriter = new FileWriter("allReviews.txt");
-            myWriter.write(building + "," + cleanliness + "," + odor + "," + wouldUseAgain + "," + comments + "\n");
+            myWriter.write(building + "," + cleanliness + "," + odor + "," + wouldUseAgain + "," + userComments + "\n");
             myWriter.close();
         } catch (IOException e) {
             System.out.println("An error occurred.");
@@ -217,7 +218,6 @@ private void PrintBody (PrintWriter out, HttpServletRequest request)
             out.println("   </table>");
             out.println("  <br/>");
         }
-        scanner.close();
     } catch (FileNotFoundException e) {
         e.printStackTrace();
     }
