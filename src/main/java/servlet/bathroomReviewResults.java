@@ -32,7 +32,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 {
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
-    PrintBody(out);
+    PrintBody(out, request);
     PrintTail(out);
 }  // End doPost
 
